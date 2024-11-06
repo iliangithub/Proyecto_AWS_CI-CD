@@ -25,6 +25,8 @@ Starting on October 1, 2024, Amazon EC2 Auto Scaling will no longer support the 
 > Al crear un rol IAM para Elastic Beanstalk, debes seleccionar EC2 como caso de uso porque Elastic Beanstalk normalmente administra instancias de EC2 para ejecutar tu aplicación. Esto garantiza que el rol tendrá los permisos correctos para realizar tareas como iniciar, detener y administrar esas instancias EC2 según sea necesario.
 >
 
+#### Entonces ¿Para qué sirve el servicio o caso de uso?
+
 > [!TIP]
 >El "servicio o caso de uso" al crear un rol IAM en AWS permite a IAM aplicar configuraciones y permisos específicos según el contexto en que el rol será usado. Esencialmente, AWS quiere saber qué servicios necesitarán permisos para actuar en tu cuenta y cuál será el servicio principal que realizará estas acciones, lo que ayuda a configurar automáticamente algunos permisos estándar para ese servicio. Aquí algunos aspectos clave:
 >
@@ -37,7 +39,7 @@ Starting on October 1, 2024, Amazon EC2 Auto Scaling will no longer support the 
 >En resumen, el caso de uso define el contexto en el que el rol será utilizado, asegurando que los permisos estén configurados para que el servicio pueda operar correctamente en tu infraestructura de AWS.
 >
 
-
+#### Entonces, si cuando quiero crear un rol para beanstalk ¿Qué sentido tiene seleccionar caso de uso EC2, a caso, no le estaría dando como permisos inadecuados?
 
 > [!TIP]
 > Aunque pueda parecer que EC2 y Elastic Beanstalk son cosas separadas, en realidad, Elastic Beanstalk necesita permisos específicos para EC2 porque Beanstalk utiliza instancias de EC2 para ejecutar tu aplicación. Seleccionar EC2 como caso de uso no es inadecuado; en realidad, es necesario y adecuado para darle a Beanstalk los permisos que necesita para administrar esas instancias de EC2.
@@ -52,7 +54,14 @@ Cuando seleccionas EC2 como caso de uso para el rol IAM, estás indicando que es
 >Entonces, seleccionar EC2 como caso de uso para el rol IAM de Elastic Beanstalk no significa que estés dando permisos inapropiados, sino que estás otorgando los permisos mínimos necesarios para que Beanstalk pueda gestionar las instancias EC2 y otros recursos en tu entorno de aplicación.
 >
 
+#### ¿Porqué existe un caso de uso Beanstalk?
 
+>[!TIP]
+> El caso de uso "Elastic Beanstalk" en IAM está diseñado para roles específicos que Elastic Beanstalk necesita para gestionar sus propios recursos, pero no para ejecutar las aplicaciones en sí. Este rol de "Elastic Beanstalk" se usa en dos escenarios diferentes:
+>- Rol de Servicio de Elastic Beanstalk: Este rol es necesario para que el propio servicio de Elastic Beanstalk tenga permisos para crear y administrar recursos en tu cuenta de AWS. Cuando seleccionas el caso de uso "Elastic Beanstalk" para el rol IAM, estás creando un rol que le permite al servicio Beanstalk gestionar instancias de EC2, asignar direcciones IP, crear balanceadores de carga y otros recursos necesarios para tu entorno.
+>
+>- Rol de Entorno de Elastic Beanstalk: Este rol se asocia directamente a las instancias EC2 dentro del entorno de tu aplicación y permite que las instancias accedan a otros servicios en AWS según lo necesite la aplicación. Aquí es donde entra el caso de uso "EC2" como opción para el rol IAM, ya que este rol tiene permisos adecuados para que las instancias EC2 (y la aplicación que corren) puedan interactuar con otros recursos, como S3 o DynamoDB.
+>
 
 ## 1.2 Crear aplicación.
 ### Paso 1. Configuración del entorno
