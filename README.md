@@ -1,7 +1,7 @@
 # Proyecto AWS CI/CD
 
 
-## 1.0 Beanstalk
+# 1.0 Beanstalk
 
 > [!IMPORTANT]
 > New accounts only support launch templates
@@ -88,12 +88,33 @@ Cuando seleccionas EC2 como caso de uso para el rol IAM, estás indicando que es
 
 ### Paso 2. Configuración del acceso al servicio
 
-- Service Role: `Use existing service role`, `aws-elasticbeanstalk-service-role`
-- EC2 key pair: `clavebeantstalk.pem`.
-- EC2 instance profile: 
-  
+- Service Role: `Use existing service role`, `gamma-beanstalk-ROL`
+- EC2 key pair: `clavebeanstalk.pem`.
+- EC2 instance profile: `gamma-beanstalk-ROL`.
+
 ### Paso 3. Configuración de redes, bases de datos y etiquetas
 
+- VPC: `La predeterminada`.
+- Dirección IP pública, `Activado`.
+- Seleccionamos todas las "instance subnets".
+- Tag: `Project` y `gamma`.
+  
 ### Paso 4. Configuración del escalado y del tráfico de instancias
 
+- Root Volume Type: `General Purpose 3 (SSD)`
+- Tipo de entorno: `Equilibrio de Carga`.
+- Tipo de instancia: `t2.micro`.
+- Visibility Public.
+
+En procesos, vamos a darle al "default" > actions y edit.
+(abrimos/desplegamos, el sesiones).
+- Session Stickiness: `enabled`
+  
 ### Paso 5. Configuración de actualizaciones, monitoreo y registros
+
+Actualizaciones e implementaciones continuas.
+Implementaciones de aplicaciones.
+- Política de implementación: `Continuo/Rolling`.
+- Tamaño del lote de implementación: `50%`.
+
+# 2.0 RDS
