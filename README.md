@@ -24,7 +24,7 @@
 
 - Service Role: `Use existing service role`, `aws-elasticbeanstalk-service-role`
 - EC2 key pair: `clavebeantstalk.pem`.
-
+- EC2 instance profile: 
   
 ### Paso 3. Configuración de redes, bases de datos y etiquetas
 
