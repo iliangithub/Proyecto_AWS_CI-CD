@@ -20,7 +20,18 @@ Starting on October 1, 2024, Amazon EC2 Auto Scaling will no longer support the 
 
 - Tipo de entidad de confianza: `Servicio AWS`
 - Servicio o caso de uso: `EC2`.
+- Elija un caso de uso para el servicio especificado: `EC2`.
 
+Agregar permisos:
+- AdministratorAccess-AWSElasticBeanstalk
+- AWSElasticBeanstalkCustomPlatformforEC2Role
+- AWSElasticBeanstalkRoleSNS
+- AWSElasticBeanstalkWebTier
+
+Detalles del rol:
+- Nombre del rol: `gamma-beanstalk-ROL`.
+- Descripción: `gamma-beanstalk-ROL`.
+  
 > [!TIP]
 > Al crear un rol IAM para Elastic Beanstalk, debes seleccionar EC2 como caso de uso porque Elastic Beanstalk normalmente administra instancias de EC2 para ejecutar tu aplicación. Esto garantiza que el rol tendrá los permisos correctos para realizar tareas como iniciar, detener y administrar esas instancias EC2 según sea necesario.
 >
