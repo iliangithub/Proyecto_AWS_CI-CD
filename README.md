@@ -1,11 +1,13 @@
 # Proyecto AWS CI/CD
 
+
+## 1.0 Beanstalk
+
 > [!IMPORTANT]
 > New accounts only support launch templates
 Starting on October 1, 2024, Amazon EC2 Auto Scaling will no longer support the creation of launch configurations for new accounts. Existing environments will not be impacted. For more information about other situations that are impacted, including temporary option settings required for new accounts, refer to Launch templates  in the Elastic Beanstalk Developer Guide.
 >
 
-## 1.0 Beanstalk
 
 ## 1.1 Crear Pares-Clave.
 
