@@ -1,3 +1,2 @@
-# ci-cd
+# Proyecto AWS CI/CD
 
-# ¿Qué es una PipeLine?
