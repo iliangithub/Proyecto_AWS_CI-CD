@@ -112,20 +112,37 @@ Cuando seleccionas EC2 como caso de uso para el rol IAM, estás indicando que es
 >
 
 ## 1.2 Crear aplicación.
+
+Lo voy a crear desde aquí:
+
+![image](https://github.com/user-attachments/assets/d5507d3d-db9c-4550-bcae-46fae52029ef)
+
 ### Paso 1. Configuración del entorno
 
-- Escogemos `Entorno de servidor web`.
+**Nivel de entorno.**
+- Escogemos: `Entorno de servidor web`.
+
+**Información de la aplicación.**
 - Application name: `gamma`.
-- Enviroment name: `gamma-prod11`.
+
+**Información del entorno.**
+- Enviroment name: `Gamma-prod11`.
 - Domain: `gamma-prod11` y CHECK AVAILABILITY.
+
+**Plataforma.**
 - Tipo de plataforma: `Plataforma administrada`.
-- Plataforma: `TomCat` (la platform branch Tomcat 10 correto 21 y platform version 5.3.0)
-- Application code: `Sample application`.
-- Custom configuration.
+- Plataforma: `TomCat` (la platform branch Tomcat 10 correto 21 y platform version 5.4.0)
+
+**Código de aplicación.**
+- `Sample application` o `Aplicación de ejemplo`.
+
+**Valores preestablecidos.**
+- Configuración Personalizada.
 
 ### Paso 2. Configuración del acceso al servicio
 
-- Service Role: `Use existing service role`, `gamma-beanstalk-ROL`
+**Acceso al Servicio**
+- Service Role: `Use existing service role`, `gamma-beanstalk-ROL` (*El que creamos en el apartado 1.1*).
 - EC2 key pair: `clavebeanstalk.pem`.
 - EC2 instance profile: `gamma-beanstalk-ROL`.
 
