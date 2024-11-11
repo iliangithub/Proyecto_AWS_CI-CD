@@ -16,11 +16,11 @@ Para completar este proyecto:
 >
 >Puedes pensar en Bitbucket como GitHub, ya que ofrece soluciones para git. Muchas organizaciones utilizan servicios de Atlassian, y junto con ello, usan el repositorio de Bitbucket.
 >
-Por lo tanto, existe una gran probabilidad de que, cuando trabajes en tiempo real, utilices repositorios de Bitbucket o repositorios git en Bitbucket.
-
-Además, junto con los repositorios git, Bitbucket proporciona una canalización de CI/CD completa, con varios servicios en esa canalización.
+*Por lo tanto, existe una gran probabilidad de que, cuando trabajes en tiempo real, utilices repositorios de Bitbucket o repositorios git en Bitbucket. Además, junto con los repositorios git, Bitbucket proporciona una canalización de CI/CD completa, con varios servicios en esa canalización.*
 
 Antes de comenzar, echemos un vistazo al diagrama arquitectónico.
+
+## 0.2 Arquitectura del proyecto:
 
 Nuestra canalización será así:
 
@@ -37,9 +37,6 @@ Obtendrá el código fuente, activará el proyecto de CodeBuild, que construirá
 Como ya sabemos, nuestra aplicación de perfil necesita conectividad de base de datos.
 
 Así que tendremos Amazon RDS, que contendrá esquemas y tablas para nuestra aplicación de perfil web.
-
-## 0.2 Arquitectura:
-
 
 # 1.0 Beanstalk
 
