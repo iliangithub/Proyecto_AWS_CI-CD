@@ -383,3 +383,19 @@ The key's randomart image is:
 |      =o.        |
 +----[SHA256]-----+
 ```
+
+voy a hacer un cat gamma-rsa.pub, para ver la clave pública.
+
+```
+Usuario@DESKTOP-HFA11LU MINGW64 ~/Desktop
+$ cat gamma-rsa.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID27r6TfzIfRAqn2cD7NPajlDytbe+Mi8y3bkbutVfKn Usuario@DESKTOP-*****
+```
+
+Ahora, voy a volver a BitBucket:
+
+![image](https://github.com/user-attachments/assets/5de4d046-593d-4048-88f7-9f4964c4b4d2)
+
+Luego, SSH keys, añado:
+
+![image](https://github.com/user-attachments/assets/45a0cc8e-78bd-4f37-a0a0-145eb63319e2)
