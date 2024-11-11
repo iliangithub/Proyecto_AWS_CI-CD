@@ -205,7 +205,7 @@ y pues vemos las credenciales y aquí tengo la contraseña:
 9T1jtPgEgma0kBmeVQIq
 ```
 
-## Inicializar la base de datos.
+## 2.2 Inicializar la base de datos.
 
 Ahora vamos a tener que modificar el Security Group, nos vamos a EC2, luego a Security Groups, buscamos el grupo de seguridad, CUYA DESCRIPCIÓN SEA `VPC Security Group`.
 
