@@ -442,6 +442,24 @@ ssh -T git@bitbucket.org
 >Warning: Permanently added 'bitbucket.org' (ED25519) to the list of known hosts.
 >git@bitbucket.org: Permission denied (publickey).
 > ```
+> **ES PORQUE NO LO HEMOS HECHO EN EL DIRECTORIO .ssh**
+
+al ejecutar `ssh -T git@bitbucket.org`
+
+nos tiene que salir:
+
+```
+$ ssh -T git@bitbucket.org
+authenticated via ssh key.
+
+You can use git to connect to Bitbucket. Shell access is disabled
+```
+
+Y ahora NOS MOVEMOS A OTRO DIRECTORIO... /tmp/
+
+```
+cd /tmp
+```
 
 ```
 git clone git@bitbucket.org:aws_devops_ci-cd/gamma-aplicacion.git
