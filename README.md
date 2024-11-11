@@ -263,3 +263,14 @@ Volvemos a las instancias y ahora selecionamos 1, y vamos a conectarnos desde al
 
 # 3.0 BitBucket.
 
+Vamos a tener que crear un Workspace:
+
+![image](https://github.com/user-attachments/assets/9772261a-f9df-4022-ad97-cfa3cddbacf9)
+
+Voy a crear un repositorio, dentro de ese WorkSpace:
+
+![image](https://github.com/user-attachments/assets/717581df-695f-4f1a-9688-92a32b2e333a)
+
+Necesitamos que el respositorio esté completamente vacío, porque queremos simplemente subir nuestro proyecto a BitBucket.
+
+![image](https://github.com/user-attachments/assets/744e47a2-1c63-4411-9066-b4e777f833db)
