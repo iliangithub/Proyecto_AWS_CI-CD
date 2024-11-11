@@ -260,3 +260,6 @@ Guardamos la regla.
 Esto lo hacemos para que nuestro Beanstalk pueda conectarse a nuestro RDS.
 
 Volvemos a las instancias y ahora selecionamos 1, y vamos a conectarnos desde allí para así poder inicializar la BD. Accederemos por SSH.
+
+# 3.0 BitBucket.
+
