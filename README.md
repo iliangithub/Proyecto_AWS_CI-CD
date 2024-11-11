@@ -118,3 +118,50 @@ Implementaciones de aplicaciones.
 - Tamaño del lote de implementación: `50%`.
 
 # 2.0 RDS
+
+Nos vamos a Amazon RDS, y creamos la base de datos:
+
+Elegir un método de creación de base de datos:
+- Creación Estandar.
+
+Opciones del motor:
+- MySQL
+- MySQL engine version: `8.0.35`
+  
+Plantilla:
+- `Capa gratuita`.
+
+Configuración:
+- Identificador de instancias de base de datos: `gamma-rds`.
+- Administración de credenciales: `Autoadministrado`.
+- Generar Contraseña Automáticamente (HABILITADO).
+
+Configuración de la instancia:
+- db.t3.micro
+
+Conectividad:
+- Acceso público: `no`.
+- Grupo de seguridad de VPC: `Crear nuevo`
+- Nuevo nombre del grupo de seguridad de VPC: `gamma-rds-sg`
+- DESPLEGAMOS, configuración adicional y comprobamos que sea el puerto: `3306`
+
+Autenticación de bases de datos:
+- Autenticación con contraseña.
+
+Configuración adicional:
+Opciones de base de datos.
+- Nombre de base de datos inicial: `accounts`
+
+Una vez hecho eso, creamos la BD:
+Cerraremos el PopUp que nos aparece de "complementos sugeridos para gamma-rds".
+
+Nos aparecerá esto:
+`Creación de base de datos gamma-rds
+Es posible que el lanzamiento de la base de datos tarde unos minutos.La única forma de ver la contraseña maestra es elegir Ver detalles de credenciales durante la creación de la base de datos. Puede modificar la instancia de base de datos para crear una contraseña nueva en cualquier momento.Puede utilizar la configuración de gamma-rds para simplificar la configuración de complementos de base de datos sugeridos mientras terminamos de crear su base de datos.
+Ver detalles de credenciales`
+
+y pues vemos las credenciales y aquí tengo la contraseña:
+
+```
+9T1jtPgEgma0kBmeVQIq
+```
