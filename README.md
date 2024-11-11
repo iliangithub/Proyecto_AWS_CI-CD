@@ -285,6 +285,62 @@ Nos vamos a Amazon RDS, y buscamos el punto de enlace de la Base de datos:
 mysql -h gamma-rds.crmqiuq428z2.us-east-1.rds.amazonaws.com -u admin -p9T1jtPgEgma0kBmeVQIq accounts
 ```
 
+voy a hacer un `SHOW databases;`
+
+este es el output:
+```
+MySQL [accounts]> SHOW databases;
++--------------------+
+| Database           |
++--------------------+
+| accounts           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+```
+Nos salimos con un `exit`, hemos podido ver la base de datos "accounts".
+Ahora voy a GitHub, que es donde está el .sql:
+
+![image](https://github.com/user-attachments/assets/ee045c22-b7ab-4c6a-bac0-c04c811ebde0)
+
+Voy a darle a Raw y nos abre así:
+
+![image](https://github.com/user-attachments/assets/fd8b579c-6fca-4bd3-9a48-14ba6864707b)
+
+y copio ese enlace:
+
+```
+https://raw.githubusercontent.com/hkhcoder/vprofile-project/refs/heads/aws-ci/src/main/resources/db_backup.sql
+```
+
+y ahora hago un:
+```
+wget https://raw.githubusercontent.com/hkhcoder/vprofile-project/refs/heads/aws-ci/src/main/resources/db_backup.sql
+```
+
+y pues voy a ponerlo en accounts:
+```
+mysql -h gamma-rds.crmqiuq428z2.us-east-1.rds.amazonaws.com -u admin -p9T1jtPgEgma0kBmeVQIq accounts < db_backup.sql
+```
+y este es el output, porque he vuelto a iniciar sesión para comprobar que todo se ha hecho correctamente:
+
+```
+MySQL [accounts]> USE accounts;
+Database changed
+
+MySQL [accounts]> SHOW TABLES;
++--------------------+
+| Tables_in_accounts |
++--------------------+
+| role               |
+| user               |
+| user_role          |
++--------------------+
+3 rows in set (0.002 sec)
+```
+
 # 3.0 BitBucket.
 
 Vamos a tener que crear un Workspace:
