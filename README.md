@@ -1,4 +1,4 @@
-# Proyecto AWS CI/CD
+# 0.0 Introducción al proyecto AWS CI/CD. "Gamma".
 
 
 # 1.0 Beanstalk
