@@ -354,3 +354,32 @@ Voy a crear un repositorio, dentro de ese WorkSpace:
 Necesitamos que el respositorio esté completamente vacío, porque queremos simplemente subir nuestro proyecto a BitBucket.
 
 ![image](https://github.com/user-attachments/assets/744e47a2-1c63-4411-9066-b4e777f833db)
+
+## 3.1 Generar pares-clave ssh.
+
+este es el output y comando:
+
+```
+Usuario@DESKTOP-HFA11LU MINGW64 ~/Desktop$ ssh-keygen
+
+Generating public/private ed***** key pair.
+Enter file in which to save the key (/c/Users/Usuario/.ssh/id_ed*****): gamma-rsa
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in gamma-rsa
+Your public key has been saved in gamma-rsa.pub
+The key fingerprint is:
+SHA256:L5U             lo censuro por si a caso.    Usuario@DESKTOP-******
+The key's randomart image is:
++--[ED***** 256]--+
+|  .o+=B..        |
+|   .o+o= =       |
+|     AA A A A    |
+|     A a A A     |
+|      A A a A    |
+|     A A a A A   |
+|      . * E .    |
+|     . + o .     |
+|      =o.        |
++----[SHA256]-----+
+```
