@@ -465,3 +465,23 @@ cd /tmp
 git clone git@bitbucket.org:aws_devops_ci-cd/gamma-aplicacion.git
 ```
 
+![image](https://github.com/user-attachments/assets/0aa61963-d9bb-4201-ba1e-df360c365a65)
+
+Y ahora si hago un cat:
+
+```
+$ cat gamma-aplicacion/.git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = git@bitbucket.org:aws_devops_ci-cd/gamma-aplicacion.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+        remote = origin
+        merge = refs/heads/main
+```
