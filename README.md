@@ -1,4 +1,44 @@
-# 0.0 Introducción al proyecto AWS CI/CD. "Gamma".
+# 0.0 Introducción al proyecto AWS CI/CD. ("gamma").
+
+En este proyecto, vamos a usar servicios de AWS para obtener nuestro código, compilarlo y desplegarlo en AWS Elastic Beanstalk. Anteriormente, hemos visto proyectos de CI/CD con Jenkins o pipelines de Jenkins CI/CD.
+
+De la misma manera, vamos a crear una canalización de código (code pipeline), pero vamos a usar servicios de AWS para esto.
+Para completar este proyecto:
+- Primero vamos a crear un entorno en AWS Elastic Beanstalk. Construiremos el código y lo desplegaremos en el entorno de Beanstalk.
+- Después, crearemos AWS RDS porque nuestra aplicación de perfil necesita conectividad con la base de datos.
+- Para el código fuente, utilizaremos repositorios de Bitbucket. (que antes estaba en GitHub).
+- Luego, vamos a usar el servicio AWS CodeBuild, que obtendrá el código fuente de Bitbucket y lo desplegará en Beanstalk.
+- Por supuesto, después de construir el artefacto, usaremos el servicio AWS CodePipeline para conectar todos estos servicios.
+- Y finalmente, vamos a probar nuestra canalización de CI/CD haciendo un commit de git y enviando los cambios a nuestro repositorio de Bitbucket, lo que activará nuestra canalización.
+
+>[!TIP]
+>Bitbucket es de Atlassian y es un nombre muy popular entre desarrolladores y también entre ingenieros de DevOps.
+>
+>Puedes pensar en Bitbucket como GitHub, ya que ofrece soluciones para git. Muchas organizaciones utilizan servicios de Atlassian, y junto con ello, usan el repositorio de Bitbucket.
+>
+Por lo tanto, existe una gran probabilidad de que, cuando trabajes en tiempo real, utilices repositorios de Bitbucket o repositorios git en Bitbucket.
+
+Además, junto con los repositorios git, Bitbucket proporciona una canalización de CI/CD completa, con varios servicios en esa canalización.
+
+Antes de comenzar, echemos un vistazo al diagrama arquitectónico.
+
+Nuestra canalización será así:
+
+Tendremos repositorios git en Bitbucket que migraremos de GitHub a Bitbucket.
+
+El servicio AWS CodeBuild funcionará como Jenkins, obteniendo el código fuente desde los repositorios git de Bitbucket, construyendo nuestro código en un artefacto y luego desplegándolo en Beanstalk.
+
+No hay una opción predeterminada para desplegarlo en Beanstalk.
+
+Usaremos el servicio AWS CodePipeline para conectar todas estas piezas, de modo que CodePipeline detectará cualquier nuevo commit en nuestro repositorio de Bitbucket.
+
+Obtendrá el código fuente, activará el proyecto de CodeBuild, que construirá el código en un artefacto y luego lo desplegará en AWS Elastic Beanstalk.
+
+Como ya sabemos, nuestra aplicación de perfil necesita conectividad de base de datos.
+
+Así que tendremos Amazon RDS, que contendrá esquemas y tablas para nuestra aplicación de perfil web.
+
+## 0.2 Arquitectura:
 
 
 # 1.0 Beanstalk
