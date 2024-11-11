@@ -1,5 +1,5 @@
 # 0.0 Introducción al proyecto AWS CI/CD. ("gamma").
-
+## 0.1 Explicación del proyecto.
 En este proyecto, vamos a usar servicios de AWS para obtener nuestro código, compilarlo y desplegarlo en AWS Elastic Beanstalk. Anteriormente, hemos visto proyectos de CI/CD con Jenkins o pipelines de Jenkins CI/CD.
 
 De la misma manera, vamos a crear una canalización de código (code pipeline), pero vamos a usar servicios de AWS para esto.
@@ -38,7 +38,7 @@ Como ya sabemos, nuestra aplicación de perfil necesita conectividad de base de 
 
 Así que tendremos Amazon RDS, que contendrá esquemas y tablas para nuestra aplicación de perfil web.
 
-# 1.0 Beanstalk
+# 1.0 Beanstalk.
 
 > [!IMPORTANT]
 > New accounts only support launch templates
