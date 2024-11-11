@@ -167,3 +167,24 @@ y pues vemos las credenciales y aquí tengo la contraseña:
 ```
 9T1jtPgEgma0kBmeVQIq
 ```
+
+## Inicializar la base de datos.
+
+Ahora vamos a tener que modificar el Security Group, nos vamos a EC2, luego a Security Groups, buscamos el grupo de seguridad, CUYA DESCRIPCIÓN SEA `VPC Security Group`.
+
+copiamos su ID de Grupo de Seguridad:
+```
+sg-099e3f53d04486ee7
+```
+
+Ahora nos vamos a la que acabamos de crear, la RDS, `gamma-rds-sg`. Editamos las reglas de entrada. Y añadimos una:
+
+- Type: `Custom TCP`.
+- Port Range: `3306`.
+- Source: `Custom` , `sg-099e3f53d04486ee7`.
+
+Guardamos la regla.
+
+Esto lo hacemos para que nuestro Beanstalk pueda conectarse a nuestro RDS.
+
+Volvemos a las instancias y ahora selecionamos 1, y vamos a conectarnos desde allí para así poder inicializar la BD. Accederemos por SSH.
