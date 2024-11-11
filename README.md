@@ -4,11 +4,11 @@ En este proyecto, vamos a usar servicios de AWS para obtener nuestro código, co
 
 De la misma manera, vamos a crear una canalización de código (code pipeline), pero vamos a usar servicios de AWS para esto.
 Para completar este proyecto:
-- Primero vamos a crear un entorno en AWS Elastic Beanstalk. Construiremos el código y lo desplegaremos en el entorno de Beanstalk.
-- Después, crearemos AWS RDS porque nuestra aplicación de perfil necesita conectividad con la base de datos.
-- Para el código fuente, utilizaremos repositorios de Bitbucket. (que antes estaba en GitHub).
-- Luego, vamos a usar el servicio AWS CodeBuild, que obtendrá el código fuente de Bitbucket y lo desplegará en Beanstalk.
-- Por supuesto, después de construir el artefacto, usaremos el servicio AWS CodePipeline para conectar todos estos servicios.
+- Primero vamos a crear un entorno en **AWS Elastic Beanstalk**. Construiremos el código y lo desplegaremos en el entorno de Beanstalk.
+- Después, crearemos **AWS RDS** porque nuestra aplicación de perfil necesita conectividad con la base de datos.
+- Para el código fuente, utilizaremos repositorios de **Bitbucket**. (que antes estaba en GitHub).
+- Luego, vamos a usar el servicio **AWS CodeBuild**, que obtendrá el código fuente de Bitbucket y lo desplegará en Beanstalk.
+- Por supuesto, después de construir el artefacto, usaremos el servicio AWS **CodePipeline** para conectar todos estos servicios.
 - Y finalmente, vamos a probar nuestra canalización de CI/CD haciendo un commit de git y enviando los cambios a nuestro repositorio de Bitbucket, lo que activará nuestra canalización.
 
 >[!TIP]
