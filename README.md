@@ -389,7 +389,7 @@ voy a hacer un cat gamma-rsa.pub, para ver la clave pública.
 ```
 Usuario@DESKTOP-HFA11LU MINGW64 ~/Desktop
 $ cat gamma-rsa.pub
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID27r6TfzIfRAqn2cD7NPajlDytbe+Mi8y3bkbutVfKn Usuario@DESKTOP-*****
+ssh-ed25519 **************************************IfRAqn2cD7NPajlDytbe+Mi8y3bkbutVfKn Usuario@DESKTOP-*****
 ```
 
 Ahora, voy a volver a BitBucket:
