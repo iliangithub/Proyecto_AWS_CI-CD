@@ -261,6 +261,30 @@ Esto lo hacemos para que nuestro Beanstalk pueda conectarse a nuestro RDS.
 
 Volvemos a las instancias y ahora selecionamos 1, y vamos a conectarnos desde allí para así poder inicializar la BD. Accederemos por SSH.
 
+```
+ssh -i "clavebeanstalk.pem" ec2-user@44.192.246.161
+```
+
+Tiene que ser obligatoriamente con el usuario "ec2-user", no te deja con root, por lo tanto no me sirve copiar y pegar el comando del AWS, hay que modificarlo un poco.
+
+```
+sudo -i
+```
+
+```
+dnf search mysql
+```
+
+```
+dnf install mariadb105 -y
+```
+
+Nos vamos a Amazon RDS, y buscamos el punto de enlace de la Base de datos:
+
+```
+mysql -h gamma-rds.crmqiuq428z2.us-east-1.rds.amazonaws.com -u admin -p9T1jtPgEgma0kBmeVQIq accounts
+```
+
 # 3.0 BitBucket.
 
 Vamos a tener que crear un Workspace:
