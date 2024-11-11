@@ -357,6 +357,13 @@ Necesitamos que el respositorio esté completamente vacío, porque queremos simp
 
 ## 3.1 Generar pares-clave ssh.
 
+> [!IMPORTANT]
+> Tienes que ejecutar el comando de keygen y poner el config en esta ruta:
+>```
+>cd /c/Users/Usuario/.ssh
+>```
+
+
 este es el output y comando:
 
 ```
