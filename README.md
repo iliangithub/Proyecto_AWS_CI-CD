@@ -156,8 +156,10 @@ Una vez hecho eso, creamos la BD:
 Cerraremos el PopUp que nos aparece de "complementos sugeridos para gamma-rds".
 
 Nos aparecerá esto:
+
 `Creación de base de datos gamma-rds
 Es posible que el lanzamiento de la base de datos tarde unos minutos.La única forma de ver la contraseña maestra es elegir Ver detalles de credenciales durante la creación de la base de datos. Puede modificar la instancia de base de datos para crear una contraseña nueva en cualquier momento.Puede utilizar la configuración de gamma-rds para simplificar la configuración de complementos de base de datos sugeridos mientras terminamos de crear su base de datos.
+
 Ver detalles de credenciales`
 
 y pues vemos las credenciales y aquí tengo la contraseña:
