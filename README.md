@@ -428,12 +428,12 @@ ssh -T git@bitbucket.org
 > Si nos sale este error:
 > ```
 > $ ssh -T git@bitbucket.org
-The authenticity of host 'bitbucket.org (185.166.143.50)' can't be established.
-ED25519 key fingerprint is SHA256:ybgmFkzwOSotHTHLJgHO0QN8L0xErw6vd0VhFA9m3SM.
-This key is not known by any other names.
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added 'bitbucket.org' (ED25519) to the list of known hosts.
-git@bitbucket.org: Permission denied (publickey).
+>The authenticity of host 'bitbucket.org (185.166.143.50)' can't be established.
+>ED25519 key fingerprint is SHA256:ybgmFkzwOSotHTHLJgHO0QN8L0xErw6vd0VhFA9m3SM.
+>This key is not known by any other names.
+>Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+>Warning: Permanently added 'bitbucket.org' (ED25519) to the list of known hosts.
+>git@bitbucket.org: Permission denied (publickey).
 > ```
 
 ```
