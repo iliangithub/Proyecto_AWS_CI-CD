@@ -155,7 +155,7 @@ Implementaciones de aplicaciones.
 - Tamaño del lote de implementación: `50%`.
 
 # 2.0 RDS
-
+## 2.1 Crear RDS.
 Nos vamos a Amazon RDS, y creamos la base de datos:
 
 Elegir un método de creación de base de datos:
