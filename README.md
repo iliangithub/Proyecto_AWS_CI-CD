@@ -399,3 +399,30 @@ Ahora, voy a volver a BitBucket:
 Luego, SSH keys, añado:
 
 ![image](https://github.com/user-attachments/assets/45a0cc8e-78bd-4f37-a0a0-145eb63319e2)
+
+y ahora, necesitamos hacer un "configfile", entonces, cuando hagamos "git push" o "git pull", en los repositorios de bitbucket , pues necesitamos usar las claves privadas que acabamos de crear antes, para logearnos.
+
+![image](https://github.com/user-attachments/assets/6116c76a-d74b-4edb-8e21-7bfb04de6884)
+
+Ponemos esto:
+
+```
+#bitbucket.org
+Host bitbucket.org
+ PreferredAuthentications publickey
+ IdentityFile ~/.ssh/gamma-rsa
+```
+
+Ahora, nos volvemos al repositorio y vamos a pues introducir.
+
+![image](https://github.com/user-attachments/assets/5d4b1319-f7a0-4bd7-8944-48bae360bb8f)
+
+copio el comando, y usamos SSH.
+
+```
+ssh -T git@bitbucket.org
+```
+
+```
+git clone git@bitbucket.org:aws_devops_ci-cd/gamma-aplicacion.git
+```
