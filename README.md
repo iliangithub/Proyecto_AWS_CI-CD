@@ -148,28 +148,46 @@ Lo voy a crear desde aquí:
 
 ### Paso 3. Configuración de redes, bases de datos y etiquetas
 
+**Nube virtual privada (VPC)**
 - VPC: `La predeterminada`.
-- Dirección IP pública, `Activado`.
+
+**Configuración de la instancia.**
+- Dirección IP pública, `ACTIVADO`.
 - Seleccionamos todas las "instance subnets".
-- Tag: `Project` y `gamma`.
+
+**NOS SALTAMOS "BASE DE DATOS"**
+
+**Etiquetas.**
+- Clave: `Project` , Valor: `gamma`.
   
 ### Paso 4. Configuración del escalado y del tráfico de instancias
 
+**Instancias.**
 - Root Volume Type: `General Purpose 3 (SSD)`
-- Tipo de entorno: `Equilibrio de Carga`.
+
+**Capacidad.**
+- Tipo de entorno: `Equilibrio de Carga`. `Min 2, Max 4.`
 - Tipo de instancia: `t2.micro`.
 - Visibility Public.
 
-En procesos, vamos a darle al "default" > actions y edit.
+**Tipo de equilibrador de carga.**
+- `Equilibrador de carga de aplicación y Dedicado`.
+
+**Procesos.**
+En procesos, **vamos a darle al "default"**, luego `actions` y `edit`.
 (abrimos/desplegamos, el sesiones).
 - Session Stickiness: `enabled`
   
 ### Paso 5. Configuración de actualizaciones, monitoreo y registros
 
-Actualizaciones e implementaciones continuas.
+`Monitorización`, `Actualizacones adminsitradas de la plataforma`, `Notificaciones por correo electrónico.`**Nos lo saltamos**.
+
+**Actualizaciones e implementaciones continuas.**
 Implementaciones de aplicaciones.
 - Política de implementación: `Continuo/Rolling`.
 - Tamaño del lote de implementación: `50%`.
+
+TODO LO DEMÁS LO SALTAMOS.
 
 # 2.0 RDS
 ## 2.1 Crear RDS.
