@@ -730,3 +730,13 @@ artifacts:
 
 ![image](https://github.com/user-attachments/assets/486292e5-149a-4998-a70d-c5abb1ec0169)
 
+# 5.0 Probar que funciona:
+
+![image](https://github.com/user-attachments/assets/eb652bc3-399c-43f2-a53e-9550eafa9418)
+
+![image](https://github.com/user-attachments/assets/cbffdaca-2fb0-43d7-bb09-e66bcbb29e5a)
+
+![image](https://github.com/user-attachments/assets/b0d201ae-0924-494c-8033-a8510c317a24)
+
+En mi caso, no ha dado ningún error, así que voy a crear la Pipeline.
+
