@@ -592,3 +592,24 @@ Nuestro artefacto va a estar en S3 bucket. Creamos un bucket:
 - Nombre del bucket: `gamma-aws-ci-cd-artifact`
 
 Y no hay nada más que hacer.
+
+## 4.2 Crear el CodeBuild.
+
+![image](https://github.com/user-attachments/assets/6b489c94-d2a8-4abb-8e96-593908c30eef)
+
+**Configuración del proyecto**
+- Nombre del proyecto: `gammacicd-build`
+- 
+**Origen**
+Aquí es curioso, porque desde el tutorial, cambia mucho la forma de hacer las cosas:
+![image](https://github.com/user-attachments/assets/b4115fbc-abe2-4d0e-a43c-47498a539067)
+
+
+** **
+** **
+** **
+** **
+** **
+** **
+** **
+** **
