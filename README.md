@@ -604,6 +604,34 @@ Y no hay nada más que hacer.
 Aquí es curioso, porque desde el tutorial, cambia mucho la forma de hacer las cosas:
 ![image](https://github.com/user-attachments/assets/b4115fbc-abe2-4d0e-a43c-47498a539067)
 
+![image](https://github.com/user-attachments/assets/cab2609d-dffe-4081-a503-9245313df8d4)
+
+![image](https://github.com/user-attachments/assets/a63e77c3-c16e-49cd-8a0d-57e7a5b8bf63)
+
+Y el nombre de la conexión: `conexion-gamma-bitbucket-ci-cd` y voy a darle pues a conectarse:
+
+![image](https://github.com/user-attachments/assets/a1ed8b6e-f754-411b-94a2-d300d17e3aef)
+
+Grant access.
+
+![image](https://github.com/user-attachments/assets/cc8533e3-7bf2-40dd-aeb6-166a1cebc49a)
+
+evidentemente, seleccionamos esa workspace.
+
+![image](https://github.com/user-attachments/assets/ef25812c-5fc8-4194-a395-6bad5d1fdbc2)
+
+y `grant access`
+
+![image](https://github.com/user-attachments/assets/05947a98-227f-46f3-9129-2b0c6bcb7f54)
+
+y conectarse.
+
+Tras esto, finalmente tenemos la conexión hecha:
+
+![image](https://github.com/user-attachments/assets/043bc3fe-e5a3-418a-9517-85203807ecfc)
+
+![image](https://github.com/user-attachments/assets/ea3f4464-ba53-4504-a924-5da20c574486)
+
 
 ** **
 ** **
