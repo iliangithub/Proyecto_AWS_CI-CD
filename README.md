@@ -740,3 +740,29 @@ artifacts:
 
 En mi caso, no ha dado ningún error, así que voy a crear la Pipeline.
 
+![image](https://github.com/user-attachments/assets/fff6d3a4-a1b9-4d8e-bb20-7f971b8b0cce)
+
+![image](https://github.com/user-attachments/assets/e4692fd5-c849-46f8-b07f-bc98a8e6c3b6)
+
+### Step 2 Elegir la configuración de la canalización
+- Nombre de la pipeline/canalización: `gammacicd-pipeline`
+### Step 3 Agregar la etapa de origenIncompleto
+
+![image](https://github.com/user-attachments/assets/500508f9-f5f3-4a4a-81da-346fedc82a7f)
+
+![image](https://github.com/user-attachments/assets/6aa43495-0344-4a44-a28f-1b3b8e80e4bb)
+
+
+### Step 4 Agregar la etapa de compilaciónIncompleto
+
+![image](https://github.com/user-attachments/assets/d7addaee-fab3-4d6e-84a3-ed5db95af3b1)
+
+### Step 5 Agregar la etapa de implementaciónIncompleto
+
+![image](https://github.com/user-attachments/assets/4518f784-f515-437b-ba3d-3b1a9f9cb518)
+
+y lo creamos.
+
+Vamos a ver, como va a hacer todo el proceso, cuando lo despliegue lo comprobamos:
+
+![image](https://github.com/user-attachments/assets/44912013-6428-45f6-8f6b-ceae20ef89ac)
