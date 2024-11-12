@@ -632,7 +632,99 @@ Tras esto, finalmente tenemos la conexión hecha:
 
 ![image](https://github.com/user-attachments/assets/ea3f4464-ba53-4504-a924-5da20c574486)
 
+![image](https://github.com/user-attachments/assets/8392040b-bd7f-4926-a00e-c555904f1703)
 
+En la parte de "Especificación de compilación".
+
+![image](https://github.com/user-attachments/assets/d167e4ec-e672-4c3a-a66d-8d73ba962fa9)
+
+Le damos al editor.
+
+aquí tenemos por ejemplo la documentación por si acaso:
+
+https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
+
+necesitamos el endpoint del RDS:
+
+```
+gamma-rds.crmqiuq428z2.us-east-1.rds.amazonaws.com
+```
+
+```
+version: 0.2
+
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+
+phases:
+  install:
+   runtime-versions:
+      java: corretto17
+  pre_build:
+    commands:
+      - apt-get update
+      - apt-get install -y jq 
+      - wget https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz
+      - tar xzf apache-maven-3.9.8-bin.tar.gz
+      - ln -s apache-maven-3.9.8 maven
+      - sed -i 's/jdbc.password=admin123/jdbc.password=contraseñadelRDSquehemoscreadoantessssss/' src/main/resources/application.properties
+      - sed -i 's/jdbc.username=admin/jdbc.username=admin/' src/main/resources/application.properties
+      - sed -i 's/db01:3306/vprodb.c50sgqqusvnr.us-east-1.rds.amazonaws.com:3306/' src/main/resources/application.properties
+  build:
+    commands:
+      - mvn install
+  post_build:
+    commands:
+       - mvn package
+artifacts:
+  files:
+     - '**/*'
+  base-directory: 'target/vprofile-v2'
+```
+
+y este es en mi caso como quedaría el código:
+
+```
+version: 0.2
+
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+
+phases:
+  install:
+   runtime-versions:
+      java: corretto17
+  pre_build:
+    commands:
+      - apt-get update
+      - apt-get install -y jq 
+      - wget https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz
+      - tar xzf apache-maven-3.9.8-bin.tar.gz
+      - ln -s apache-maven-3.9.8 maven
+      - sed -i 's/jdbc.password=admin123/jdbc.password= /' src/main/resources/application.properties
+      - sed -i 's/jdbc.username=admin/jdbc.username=admin/' src/main/resources/application.properties
+      - sed -i 's/db01:3306/vprodb.c50sgqqusvnr.us-east-1.rds.amazonaws.com:3306/' src/main/resources/application.properties
+  build:
+    commands:
+      - mvn install
+  post_build:
+    commands:
+       - mvn package
+artifacts:
+  files:
+     - '**/*'
+  base-directory: 'target/vprofile-v2'
+```
 ** **
 ** **
 ** **
