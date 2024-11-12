@@ -711,9 +711,9 @@ phases:
       - wget https://archive.apache.org/dist/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz
       - tar xzf apache-maven-3.9.8-bin.tar.gz
       - ln -s apache-maven-3.9.8 maven
-      - sed -i 's/jdbc.password=admin123/jdbc.password= /' src/main/resources/application.properties
+      - sed -i 's/jdbc.password=admin123/jdbc.password=9T1jtPgEgma0kBmeVQIq/' src/main/resources/application.properties
       - sed -i 's/jdbc.username=admin/jdbc.username=admin/' src/main/resources/application.properties
-      - sed -i 's/db01:3306/vprodb.c50sgqqusvnr.us-east-1.rds.amazonaws.com:3306/' src/main/resources/application.properties
+      - sed -i 's/db01:3306/gamma-rds.crmqiuq428z2.us-east-1.rds.amazonaws.com:3306/' src/main/resources/application.properties
   build:
     commands:
       - mvn install
