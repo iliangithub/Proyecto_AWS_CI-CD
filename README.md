@@ -562,6 +562,33 @@ Si nos vamos al BitBucket:
 
 # 4.0 AWS CodeBuild.
 
-Nuestro artefacto va a estar en S3 bucket.
+Vamos a usar el servicio AWS CodeBuild para obtener nuestro código fuente y construirlo en un artefacto.
+
+Entonces, busca CodeBuild y ábrelo.
+
+No necesito explicarte CodeBuild desde cero porque ya conoces Jenkins. Es la versión en la nube de AWS de Jenkins.
+
+La diferencia, o la principal diferencia, diría yo, es Jenkins. En Jenkins necesitamos lanzar una instancia o necesitamos una máquina virtual o un ordenador para ejecutar el servicio de Jenkins. CodeBuild es diferente.
+
+Es un servicio de pago por uso. Creas un proyecto de CodeBuild, que es como un trabajo en Jenkins. Y cuando ejecutas ese proyecto o ejecutas la compilación, el recurso de cómputo que usa, la RAM, la memoria, la CPU, lo que sea que utilice, solo pagas por eso durante el tiempo que se use.
+
+Mientras tu compilación esté en ejecución, solo pagas por el tiempo de compilación, así que no necesitas tener continuamente una instancia de EC2 en ejecución.
+
+Si ves aquí, dice que AWS CodeBuild es un servicio de integración continua totalmente gestionado que compila el código fuente, ejecuta pruebas, produce paquetes de software y dice que pagas solo por el tiempo de compilación que usas.
+
+Y es bastante simple.
+
+Lo principal en CodeBuild es el archivo buildspec.
 
 ## 4.1 Crear S3 Bucket.
+
+Nuestro artefacto va a estar en S3 bucket. Creamos un bucket:
+
+**Configuración General.**
+- Región de AWS: EE. UU. Este (Norte de Virginia) us-east-1
+>[!IMPORTANT]
+> Es importante que el S3 bucket esté creado en la misma región que el "CodeBuild"
+- Tipo de bucket: `Uso general`
+- Nombre del bucket: `gamma-aws-ci-cd-artifcat`
+
+Y no hay nada más que hacer.
