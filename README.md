@@ -589,6 +589,6 @@ Nuestro artefacto va a estar en S3 bucket. Creamos un bucket:
 >[!IMPORTANT]
 > Es importante que el S3 bucket esté creado en la misma región que el "CodeBuild"
 - Tipo de bucket: `Uso general`
-- Nombre del bucket: `gamma-aws-ci-cd-artifcat`
+- Nombre del bucket: `gamma-aws-ci-cd-artifact`
 
 Y no hay nada más que hacer.
