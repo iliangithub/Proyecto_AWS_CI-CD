@@ -485,3 +485,83 @@ $ cat gamma-aplicacion/.git/config
         remote = origin
         merge = refs/heads/main
 ```
+
+![image](https://github.com/user-attachments/assets/c780051d-e160-46bd-9f1a-7bd22f478070)
+
+![image](https://github.com/user-attachments/assets/3b1a35c6-4783-4663-b1d2-f9f533c841a0)
+
+Ahora, vamos a cambiar a la rama `aws-ci`
+
+```
+git checkout aws-ci
+```
+
+Bueno si hacemos un:
+
+```
+git branch -a
+```
+Podemos ver todas las ramas.
+
+Si nuestro repositorio tiene "tags", podemos hacer un `git fetch --tags` (lo ejecutamos).
+
+```
+git remove rm origin
+```
+
+Y ahora la URL, está borrada:
+
+```
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+```
+
+```
+git remote add origin git@bitbucket.org:aws_devops_ci-cd/gamma-aplicacion.git
+```
+
+y si volvemos a hacer un cat:
+```
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = git@bitbucket.org:aws_devops_ci-cd/gamma-aplicacion.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+```
+aparece la URL.
+
+```
+$ git push origin --all
+Enumerating objects: 787, done.
+Counting objects: 100% (787/787), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (448/448), done.
+Writing objects: 100% (787/787), 11.60 MiB | 9.62 MiB/s, done.
+Total 787 (delta 233), reused 787 (delta 233), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (233/233), done.
+To bitbucket.org:aws_devops_ci-cd/gamma-aplicacion.git
+ * [new branch]      aws-ci -> aws-ci
+ * [new branch]      main -> main
+```
+
+Si nos vamos al BitBucket:
+
+![image](https://github.com/user-attachments/assets/d8869926-c374-4a8b-90c4-2ec57e0724f1)
+
+# 4.0 AWS CodeBuild.
+
+Nuestro artefacto va a estar en S3 bucket.
+
+## 4.1 Crear S3 Bucket.
