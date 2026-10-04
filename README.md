@@ -2,6 +2,9 @@
 > Este repositorio fue creado por primera vez el 31 de agosto de 2024.
 >
 > ![Captura de la ultima modificacion del repositorio](IMG/Captura%20de%20pantalla%202026-10-04%20235152.png)
+> 
+> Se decidió borrar el anterior repositorio y subirlo en este para censurar datos, IDs, además de que aparecían en el historial de commits.
+> 
 
 # 0.0 Introducción al proyecto AWS CI/CD. ("gamma").
 ## 0.1 Explicación del proyecto.
